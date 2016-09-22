@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-dotfiles="$HOME/.dotfiles"
+dotfiles="$( cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo "Installing/Updating dotfiles...\n"
+echo "Installing/Updating dotfiles..."
 
 lnif() {
 	if [ ! -e $2 ]; then
@@ -10,7 +10,7 @@ lnif() {
 	fi
 }
 
-echo "Setting up bash...\n"
+echo "Setting up bash..."
 lnif $dotfiles/.bashrc $HOME/.bashrc
 lnif $dotfiles/.bash_profile $HOME/.bash_profile
 lnif $dotfiles/.bash_prompt $HOME/.bash_prompt
@@ -20,12 +20,12 @@ lnif $dotfiles/.exports $HOME/.exports
 lnif $dotfiles/.wgetrc $HOME/.wgetrc
 lnif $dotfiles/.curlrc $HOME/.curlrc
 
-echo "Setting up tmux...\n"
+echo "Setting up tmux..."
 lnif $dotfiles/.tmux.conf $HOME/.tmux.conf
 
-echo "Setting up vim...\n"
+echo "Setting up vim..."
 lnif $dotfiles/.vimrc $HOME/.vimrc
 lnif $dotfiles/.vim $HOME/.vim
 
-echo "Setting up Hammerspoon...\n"
+echo "Setting up Hammerspoon..."
 lnif $dotfiles/.hammerspoon $HOME/.hammerspoon
