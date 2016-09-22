@@ -9,7 +9,7 @@ set autoread
 set ttyfast
 
 " ============== PLUGINS =================
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
