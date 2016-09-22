@@ -1,0 +1,7 @@
+# folder view configuration files
+.DS_Store
+Desktop.ini
+
+# thumnail cache files
+._*
+Thumbs.db
