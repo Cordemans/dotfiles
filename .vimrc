@@ -17,9 +17,6 @@ Plugin 'Smart-Tabs'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'myusuf3/numbers.vim'
-
-Plugin 'spf13/piv'
-
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'honza/vim-snippets'
 
