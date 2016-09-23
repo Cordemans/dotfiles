@@ -43,6 +43,8 @@ set showmatch
 set visualbell
 set noerrorbells
 
+" disable folding
+set nofoldenable
 
 " start scrolling when we're 8 lines away from margins
 set scrolloff=8
