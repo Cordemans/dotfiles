@@ -17,11 +17,10 @@ Plugin 'Smart-Tabs'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'myusuf3/numbers.vim'
-
-Plugin 'spf13/piv'
-
 Plugin 'terryma/vim-multiple-cursors'
-
+Plugin 'honza/vim-snippets'
+Plugin 'godlygeek/tabular'
+Plugin 'mhinz/vim-signify'
 
 call vundle#end()
 filetype plugin indent on
@@ -42,6 +41,8 @@ set showmatch
 set visualbell
 set noerrorbells
 
+" disable folding
+set nofoldenable
 
 " start scrolling when we're 8 lines away from margins
 set scrolloff=8
@@ -76,11 +77,17 @@ set colorcolumn=120
 
 set backspace=indent,eol,start " backspace in insert mode
 
+" save on buffer switch
+set autowrite
 
 " this makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
+
+" sets how many lines of history VIM has to remember
+set history=1000
+set undolevels=1000
 
 " down is really the next line
 nnoremap j gj
@@ -93,4 +100,20 @@ inoremap jj <esc>
 vnoremap > >gv
 vnoremap < <gv
 
-" PIV, tabularize, numbers, surround, snipmate
+" Invisible character colours
+highlight SpecialKey guifg=#4a4a59
+highlight NonText guifg=#4a4a59
+
+set cursorline
+
+" use unix as the standard file type
+set ffs=unix,dos,mac
+
+
+" remember last position
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" show airline
+set laststatus=2
