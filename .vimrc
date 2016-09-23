@@ -113,3 +113,6 @@ set ffs=unix,dos,mac
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" show airline
+set laststatus=2
