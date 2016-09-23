@@ -20,6 +20,7 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'honza/vim-snippets'
 Plugin 'godlygeek/tabular'
+Plugin 'mhinz/vim-signify'
 
 call vundle#end()
 filetype plugin indent on
