@@ -2,6 +2,8 @@
 
 dotfiles="$( cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+git submodule update --recursive
+
 echo "Installing/Updating dotfiles..."
 
 lnif() {
