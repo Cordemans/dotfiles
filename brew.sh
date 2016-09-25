@@ -8,6 +8,11 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew install findutils
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew install gnu-sed --with-default-names
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
@@ -15,7 +20,6 @@ brew install wget --with-iri
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
 
 # Install other useful binaries.
 brew install ack
@@ -24,6 +28,8 @@ brew install imagemagick --with-webp
 brew install lynx
 brew install tree
 brew install tmux
+brew install node
+brew install homebrew/dupes/rsync
 
 brew cask install thunderbird
 brew cask install firefox
@@ -40,6 +46,7 @@ brew cask install macdown
 brew cask install transmission
 brew cask install flux
 brew cask install spotify
+brew cask install vlc
 
 
 # Remove outdated versions from the cellar.
