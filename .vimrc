@@ -117,3 +117,4 @@ endif
 
 " show airline
 set laststatus=2
+let g:airline#extensions#whitespace#enabled = 0
