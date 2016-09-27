@@ -94,12 +94,20 @@ set cursorline
 " use unix as the standard file type
 set ffs=unix,dos,mac
 
-
 " remember last position
-if has("autocmd")
-	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" show airline
+" always show statusline
 set laststatus=2
 let g:airline#extensions#whitespace#enabled = 0
+
+" do not use powerline fonts
+let g:airline_powerline_fonts = 0
+
+" do not show separators
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+" more natural split opening
+set splitbelow
+set splitright
