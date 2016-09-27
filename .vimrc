@@ -125,5 +125,5 @@ set splitright
 " CtrlP config
 "
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_user_command = "find %s -type f | egrep -v '/.(git|hg|svn)|solr|tmp/' | egrep -v '.(png|exe|jpg|gif|jar|class|swp|swo|log|gitkep|keepme|so|o)$'"
 let g:ctrlp_working_path_mode = '~'
