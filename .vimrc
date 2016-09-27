@@ -73,7 +73,9 @@ set hidden
 " sets how many lines of history VIM has to remember
 set history=1000
 set undolevels=1000
-set wildignore=*.swp,*.bak
+set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pdf,*.bak,*.beam
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 " down is really the next line
 nnoremap j gj
@@ -118,3 +120,10 @@ let g:airline_right_sep=''
 " more natural split opening
 set splitbelow
 set splitright
+
+"
+" CtrlP config
+"
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_working_path_mode = '~'
