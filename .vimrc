@@ -73,6 +73,7 @@ set hidden
 " sets how many lines of history VIM has to remember
 set history=1000
 set undolevels=1000
+set wildignore=*.swp,*.bak
 
 " down is really the next line
 nnoremap j gj
@@ -99,6 +100,12 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " always show statusline
 set laststatus=2
+" show command in bottom bar
+set showcmd
+
+"
+" Airline configurations
+"
 let g:airline#extensions#whitespace#enabled = 0
 
 " do not use powerline fonts
