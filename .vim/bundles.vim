@@ -4,7 +4,7 @@ set nocompatible
 filetype off
 
 " let Vundle manage Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
