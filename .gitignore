@@ -5,6 +5,3 @@ Desktop.ini
 # thumnail cache files
 ._*
 Thumbs.db
-
-# ignore vim plugins managed by vundle
-.vim/bundle/*
