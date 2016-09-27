@@ -8,23 +8,8 @@ set autoread
 " optimize for fast terminal connections
 set ttyfast
 
-" ============== PLUGINS =================
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Smart-Tabs'
-Plugin 'tpope/vim-surround'
-Plugin 'bling/vim-airline'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'honza/vim-snippets'
-Plugin 'godlygeek/tabular'
-Plugin 'mhinz/vim-signify'
-
-call vundle#end()
-filetype plugin indent on
-
+" Vundle configuration
+source ~/.vim/bundles.vim
 
 color molokai
 
